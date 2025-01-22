@@ -1,0 +1,52 @@
+\ProvidesClass{BUP}
+\DeclareOption*{%
+  \PassOptionsToClass{\CurrentOption}{article}%
+}
+\ProcessOptions\relax
+\LoadClass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage[turkish, shorthands=!]{babel}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage{times}%Matematikte ve metinde Times Roman versiyonu; 
+%\renewcommand\familydefault{\sfdefault}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage{tikz}
+\RequirePackage[left=4cm,right=2cm,top=3cm,bottom=3cm]{geometry}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage{amssymb,amsmath,amsthm}
+\RequirePackage{graphics,graphicx}
+\RequirePackage{float}
+\RequirePackage{multirow}
+\RequirePackage{setspace}
+\RequirePackage{enumitem}
+\setlist{noitemsep,nolistsep}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\baselinestretch}{1.5}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\addto\captionsturkish{\renewcommand\contentsname{İÇİNDEKİLER}}
+\RequirePackage{eso-pic}
+\RequirePackage{color}
+\AddToShipoutPicture*{%
+\scalebox{1.3}
+{\put(0,-150)
+{\includegraphics[height=297mm,width=210mm]{filigran}}}}
+\RequirePackage{tocloft}
+
+\RequirePackage{caption}
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+\renewcommand{\cftfigfont}{Şekil\;}
+\renewcommand{\cfttabfont}{Tablo\;}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage{totpages}
+\RequirePackage{verbatim}
+\flushbottom
+\RequirePackage[pdftex, unicode, linktoc=all, hidelinks, breaklinks]{hyperref}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{xurl}
+\urlstyle{same}
